@@ -1,278 +1,259 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8" />
-  <title>개인정보처리방침 - 정원일기</title>
+  <meta charset="UTF-8" />
+  <title>개인정보처리방침</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    :root {
-      color-scheme: light dark;
-    }
     body {
-      max-width: 820px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background-color: #fafafa;
+      padding: 24px;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 24px 16px 40px;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        "Noto Sans KR", sans-serif;
-      line-height: 1.7;
-      font-size: 15px;
     }
     h1, h2, h3 {
       font-weight: 700;
-      line-height: 1.4;
+      color: #111;
     }
     h1 {
-      font-size: 1.6rem;
-      margin-bottom: 0.75rem;
+      font-size: 1.8rem;
+      margin-bottom: 0.8rem;
     }
     h2 {
-      font-size: 1.2rem;
-      margin-top: 1.8rem;
-      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
+      margin-top: 2rem;
+      border-left: 4px solid #4a90e2;
+      padding-left: 8px;
     }
     h3 {
-      font-size: 1rem;
+      font-size: 1.05rem;
       margin-top: 1.2rem;
-      margin-bottom: 0.4rem;
     }
     p {
       margin: 0.4rem 0;
     }
-    ul, ol {
-      margin: 0.4rem 0 0.4rem 1.4rem;
+    ul {
+      margin: 0.3rem 0 0.6rem 1.2rem;
       padding: 0;
     }
     li {
       margin: 0.2rem 0;
     }
-    code {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-        "Liberation Mono", "Courier New", monospace;
-      font-size: 0.9em;
-      background: rgba(0,0,0,0.04);
-      padding: 0 3px;
-      border-radius: 3px;
+    .meta {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 1.5rem;
     }
-    hr {
-      border: none;
-      border-top: 1px solid rgba(0,0,0,0.12);
-      margin: 1.5rem 0;
+    .section {
+      margin-bottom: 1.5rem;
+      background: #ffffff;
+      padding: 16px 18px;
+      border-radius: 8px;
+      box-shadow: 0 0 0 1px rgba(0,0,0,0.03);
+    }
+    strong {
+      font-weight: 600;
     }
   </style>
 </head>
 <body>
-  <h1>개인정보처리방침 (정원일기)</h1>
-
-  <p>
-    본 개인정보처리방침은 안드로이드 전용 앱 <strong>“정원일기”</strong>
-    (namespace: <code>lsh.garden.diary</code>, Flutter/Kotlin Compose 기반)에서 적용됩니다.
-    앱 기능인 일기, 가계부, 전광판, 만보기(걸음수), AI 스티커, 알림 및 백엔드 API 연동을 모두 반영합니다.
+  <h1>개인정보처리방침</h1>
+  <p class="meta">
+    본 개인정보처리방침은 <strong>[정원일기]</strong>(이하 “앱”)이 제공하는 서비스 이용과 관련하여, 사용자의 개인정보가 어떻게 수집·이용·보관·파기되는지에 대해 안내하기 위해 마련되었습니다.<br />
+    본 앱은 Google Play 정책 및 대한민국 개인정보보호법을 준수합니다.<br />
+    <br />
+    최종 수정일: <strong>2025-12-01</strong>
   </p>
 
-  <h2>제1조 (개인정보의 수집 항목)</h2>
-  <ol>
-    <li>
-      <strong>회원가입/인증</strong>:
-      이메일, 닉네임, 프로필 이미지(선택), Firebase UID, Kakao/Google 식별자,
-      설치/디바이스 식별자, 앱 무결성 토큰(Firebase App Check).
-    </li>
-    <li>
-      <strong>서비스 이용 데이터</strong>:
-      <ul>
-        <li>
-          <strong>일기</strong>: 일기 제목/내용, 사진·영상·스티커, 감정 태그,
-          캘린더/통계 사용 이력.
-        </li>
-        <li>
-          <strong>가계부</strong>: 수입/지출 금액, 카테고리, 메모, 결제수단(자체 저장용),
-          월 예산, 반복/정기 거래 설정.
-        </li>
-        <li>
-          <strong>전광판/게시·위젯</strong>:
-          공개용 문구 또는 상태 메시지, 선택한 테마/배경,
-          표시 일정, 푸시/로컬 알림 설정.
-        </li>
-        <li>
-          <strong>만보기/활동</strong>: 걸음 수, 목표 달성 이력, 리마인더 수신 여부.</li>
-        <li>
-          <strong>설정값</strong>: 테마, 잠금/보안 설정, 백업/복원 선택,
-          알림·권한 동의 내역.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <strong>기기/로그 정보</strong>:
-      단말기 모델, OS/앱 버전, 언어, 접속 IP/타임스탬프,
-      Crash/에러 로그(Firebase Crashlytics), 설치 리퍼러, Push 토큰.
-    </li>
-    <li>
-      <strong>선택 권한 수집 항목</strong>:
-      카메라 촬영 이미지, 갤러리 선택 미디어, 오디오/마이크 입력(영상 녹음 시),
-      알림 수신 여부, 활동량/센서 데이터(스텝 카운터·디텍터),
-      부팅 후 동작 여부(리마인더), 위치(가계부 영수증 위치 메모 선택 시에만 수집).
-    </li>
-  </ol>
+  <div class="section">
+    <h2>1. 수집하는 개인정보</h2>
+    <p>
+      본 앱은 기본적으로 <strong>사용자의 개인정보를 서버로 수집하거나 저장하지 않습니다.</strong><br />
+      앱의 대부분 기능은 <strong>사용자 기기 내부(로컬)에만 저장</strong>되며, 외부로 전송되지 않습니다.
+    </p>
+    <p>
+      다만 아래의 선택적 기능을 사용하거나 사용자가 직접 공유할 경우에 한하여, 특정 데이터가 앱 내에서 처리될 수 있습니다.
+    </p>
 
-  <h2>제2조 (개인정보의 수집 및 이용 목적)</h2>
-  <ol>
-    <li>
-      <strong>계정 및 인증</strong>:
-      소셜 로그인(Kakao/Google) 및 Firebase Auth 기반 사용자 식별,
-      부정 사용 방지(Firebase App Check).
-    </li>
-    <li>
-      <strong>콘텐츠 제공</strong>:
-      일기 작성/편집/백업, 미디어 업로드·저장(Firestore/Storage/Isar 로컬 DB),
-      가계부 기록/통계, 전광판 문구/테마 노출, 만보기 목표 관리.
-    </li>
-    <li>
-      <strong>통계 및 리포트</strong>:
-      감정·걸음·가계부 그래프, 달력/전광판 스케줄, 알림/위젯 업데이트.
-    </li>
-    <li>
-      <strong>알림 및 리마인더</strong>:
-      푸시/로컬 알림 발송, 만보기 목표 리마인더,
-      가계부 결제 예정 알림, 부팅 후 재설정.
-    </li>
-    <li>
-      <strong>고객지원 및 품질 개선</strong>:
-      오류 분석(Firebase Crashlytics) 및 사용성 개선(Firebase Analytics).
-    </li>
-    <li>
-      <strong>마케팅/프로모션(선택)</strong>:
-      초대 링크, 설치 리퍼러 기반 캠페인 효과 분석.
-    </li>
-  </ol>
+    <h3>1-1. 로컬 저장 데이터 (서버 전송 없음)</h3>
+    <ul>
+      <li>일기 내용 및 감정 기록</li>
+      <li>태그, 스티커, 테마 설정</li>
+      <li>정원 테마 및 성장 정보</li>
+      <li>메모·전광판 데이터</li>
+      <li>일정 및 캘린더 정보</li>
+      <li>기기 센서 기반 걸음 수·활동시간·이동 거리</li>
+      <li>음성 메모 파일</li>
+      <li>AI 인물 추출(배경 제거) 결과 이미지</li>
+      <li>기타 사용자 설정 및 환경설정 값</li>
+    </ul>
+    <p><strong>위 정보는 모두 기기 내부에만 저장되며, 서버로 전송되지 않습니다.</strong></p>
 
-  <h2>제3조 (개인정보의 보유 및 이용 기간)</h2>
-  <ol>
-    <li>
-      <strong>계정·콘텐츠</strong>
-      (일기/가계부/전광판/만보기 데이터):
-      회원 탈퇴 또는 사용자가 앱 내에서 삭제 시 지체 없이 삭제하며,
-      클라우드 백업/동기화본도 7일 이내 파기합니다.
-    </li>
-    <li>
-      <strong>로그/분석 데이터</strong>:
-      수집일로부터 최대 14개월 보관 후 파기(품질 개선 목적).
-    </li>
-    <li>
-      <strong>법령상 보존이 필요한 경우</strong>
-      (예: 전자상거래 기록 등)는 해당 기간 보관 후 즉시 파기합니다.
-    </li>
-  </ol>
+    <h3>1-2. 선택적 기능 사용 시 수집되는 정보</h3>
 
-  <h2>제4조 (개인정보의 제3자 제공)</h2>
-  <p>
-    회사는 이용자 동의 또는 법령 근거 없이 제3자에게 개인정보를 제공하지 않으며,
-    수사기관 등의 적법한 요청이 있을 때에 한해 최소 범위로 제공합니다.
-  </p>
+    <h3>(1) 공유 일기 (친구 공개)</h3>
+    <ul>
+      <li>사용자가 공유를 선택한 게시글만 지정한 “친구” 사용자에게 전달됩니다.</li>
+      <li>닉네임, 게시글 내용, 사진(선택 시), 댓글 등</li>
+      <li>공개 범위는 사용자 설정에 따라 제한됩니다.</li>
+    </ul>
 
-  <h2>제5조 (개인정보 처리의 위탁)</h2>
-  <ol>
-    <li>
-      <strong>Google Firebase</strong>
-      (Firestore, Auth, Storage, Crashlytics, Analytics, App Check, Cloud Messaging):
-      인증, 데이터 저장·백업, 알림, 로그 수집.
-    </li>
-    <li>
-      <strong>Google Play 서비스</strong>:
-      설치 리퍼러 측정, 푸시 토큰 관리.
-    </li>
-    <li>
-      <strong>Kakao/Google 로그인</strong>:
-      소셜 계정 인증.
-    </li>
-    <li>
-      <strong>백엔드/클라우드 운영사(필요 시)</strong>:
-      API 및 서버 운영, 데이터 백업.
-      위탁계약 종료 시 지체 없이 데이터를 파기합니다.
-    </li>
-  </ol>
+    <h3>(2) 공동 가계부</h3>
+    <ul>
+      <li>가계부 내역(지출/수입), 메모, 통계 정보</li>
+      <li>공동 멤버 간 실시간 동기화</li>
+      <li>공동 가계부 멤버에게만 공유됩니다.</li>
+    </ul>
 
-  <h2>제6조 (이용자 권리 및 행사 방법)</h2>
-  <ol>
-    <li>
-      이용자는 앱 설정 또는 고객센터를 통해
-      개인정보 열람·정정·삭제·처리정지·동의 철회를 요청할 수 있습니다.
-    </li>
-    <li>
-      선택 권한(카메라, 미디어, 알림, 활동량/센서, 위치 등)은
-      단말기 설정에서 변경할 수 있습니다.
-    </li>
-    <li>
-      회원 탈퇴 시 계정과 연동된 일기, 가계부, 전광판 문구, 만보기 기록 및 백업 데이터는
-      관련 법령을 제외하고 지체 없이 삭제됩니다.
-    </li>
-  </ol>
+    <h3>(3) 알림(Reminder)</h3>
+    <ul>
+      <li>사용자가 설정한 리마인더 시간, 주기, 알림 설정 값</li>
+      <li>기기 알림 전송을 위한 용도로만 사용되며, 서버 전송은 이루어지지 않습니다.</li>
+    </ul>
 
-  <h2>제7조 (개인정보의 파기 절차 및 방법)</h2>
-  <ol>
-    <li>
-      파기사유 발생 시 지체 없이 파기하며,
-      법령상 보관 의무가 있는 경우 별도 분리 보관 후
-      보존기간 종료 즉시 파기합니다.
-    </li>
-    <li>
-      전자적 파일은 복구 불가능한 방식으로 영구 삭제하고,
-      출력물은 파쇄 또는 소각합니다.
-    </li>
-  </ol>
+    <h3>(4) 음성 메모</h3>
+    <ul>
+      <li>사용자가 직접 녹음한 음성 파일</li>
+      <li>로컬 저장만 하며 서버로 전송되지 않습니다.</li>
+    </ul>
 
-  <h2>제8조 (기기 권한 및 센서 이용 안내)</h2>
-  <ul>
-    <li>
-      <strong>카메라/사진·영상</strong>:
-      일기·가계부 영수증·전광판 배경 등 이미지/영상 촬영 및 첨부.
-    </li>
-    <li>
-      <strong>마이크/오디오</strong>:
-      영상 녹음 시 음성 포함.
-    </li>
-    <li>
-      <strong>알림/부팅 수신</strong>:
-      리마인더, 만보기 목표 알림, 가계부 결제 예정 안내,
-      부팅 후 알림 재설정.
-    </li>
-    <li>
-      <strong>활동량/건강</strong>
-      (ACTIVITY_RECOGNITION, FOREGROUND_SERVICE_HEALTH):
-      스텝 카운터·디텍터 기반 만보기 기록 및 목표 알림.
-    </li>
-    <li>
-      <strong>위치(선택)</strong>:
-      가계부 영수증 위치 메모 시 사용.
-    </li>
-    <li>
-      <strong>저장소/미디어 접근</strong>:
-      갤러리 선택, 백업/복원 시 파일 접근.
-    </li>
-    <li>
-      <strong>인터넷</strong>:
-      Firebase 및 백엔드 API 통신.
-    </li>
-  </ul>
+    <h3>(5) AI 인물 추출 기능 (배경 제거)</h3>
+    <ul>
+      <li>사용자가 선택한 사진</li>
+      <li>사진은 <strong>사용자 기기 내에서만 처리</strong>되며 외부 서버로 업로드되지 않습니다.</li>
+      <li>얼굴/신체/바이오메트릭 정보는 저장·분석되지 않으며, 단순한 이미지 편집(배경 제거) 기능만 제공합니다.</li>
+    </ul>
+  </div>
 
-  <h2>제9조 (개인정보의 안전성 확보 조치)</h2>
-  <ol>
-    <li>전송구간 암호화: HTTPS/TLS 적용.</li>
-    <li>접근통제: 인증·인가 정책, Firebase App Check 기반 무결성 검증.</li>
-    <li>최소 수집/마스킹: Crashlytics·로그에 민감정보 저장 금지, 필수 정보만 수집.</li>
-    <li>데이터 분리 및 백업: 계정 단위 접근제어, 백업 데이터 분리 저장 및 7일 내 파기.</li>
-    <li>물리·기술 보호: 보안 업데이트, 악성 행위 탐지, 권한 관리 및 정기 점검.</li>
-  </ol>
+  <div class="section">
+    <h2>2. 개인정보의 이용 목적</h2>
+    <p>본 앱은 아래 목적에 한하여 로컬 또는 선택적 공유 데이터를 사용합니다.</p>
+    <ul>
+      <li>일기 작성 및 감정 기록 기능 제공</li>
+      <li>걸음 수·활동 기록과 일기 연동 기능 제공</li>
+      <li>메모·전광판 기능 제공</li>
+      <li>테마 및 UI 커스터마이징 제공</li>
+      <li>정원 성장 시스템 및 미션 보상 기능 제공</li>
+      <li>일기 작성 리마인더 및 알림 기능 제공</li>
+      <li>사용자가 선택한 경우에 한해 친구 또는 공동 멤버 간 데이터 공유</li>
+    </ul>
+    <p><strong>어떠한 데이터도 광고, 프로파일링, 제3자 분석 목적으로 사용되지 않습니다.</strong></p>
+  </div>
 
-  <h2>제10조 (개인정보 보호책임자 및 연락처)</h2>
-  <ul>
-    <li>개인정보 보호책임자: <em>작성자 기입</em></li>
-    <li>문의: 앱 내 고객센터 또는 이메일(<em>작성자 기입</em>)</li>
-    <li>문의 시 신속하고 성실하게 답변드리겠습니다.</li>
-  </ul>
+  <div class="section">
+    <h2>3. 개인정보의 보관 및 파기</h2>
 
-  <h3>고지 및 변경</h3>
-  <p>
-    본 방침은 앱 내 “설정 &gt; 개인정보처리방침”에서 확인할 수 있으며,
-    서비스/법령 변경 시 사전 공지 후 개정됩니다.
-  </p>
+    <h3>3-1. 보관</h3>
+    <ul>
+      <li>모든 개인 데이터는 <strong>사용자 기기 내 로컬 저장소에 보관</strong>됩니다.</li>
+      <li>서버나 클라우드로 업로드되지 않습니다.</li>
+    </ul>
+
+    <h3>3-2. 파기</h3>
+    <p>사용자는 다음 중 하나를 수행함으로써 데이터를 직접 삭제할 수 있습니다.</p>
+    <ul>
+      <li>앱의 개별 항목(일기, 메모, 가계부 내역 등) 삭제</li>
+      <li>앱 내 데이터 초기화 기능 실행(제공되는 경우)</li>
+      <li>앱 삭제</li>
+    </ul>
+    <p>서버를 사용하지 않으므로 별도의 서버 데이터 보관 기간은 존재하지 않습니다.</p>
+  </div>
+
+  <div class="section">
+    <h2>4. 제3자 제공 여부</h2>
+    <p>
+      본 앱은 사용자의 동의 없이 개인정보를 제3자에게 제공하지 않습니다.<br />
+      단, 사용자가 직접 공유 기능을 사용할 경우에 한하여 선택한 상대에게만 특정 데이터가 제공됩니다.
+    </p>
+    <ul>
+      <li>공유 일기: 친구 목록으로 등록된 사용자에게만 게시글이 공개됩니다.</li>
+      <li>공동 가계부: 해당 공동 가계부에 초대된 멤버에게만 내역이 공유됩니다.</li>
+    </ul>
+    <p>그 외 광고사, 분석사 등 외부 업체와의 데이터 공유는 없습니다.</p>
+  </div>
+
+  <div class="section">
+    <h2>5. 기기 권한 사용 안내</h2>
+    <p>
+      본 앱은 서비스 제공을 위해 아래 권한을 요청할 수 있습니다.<br />
+      모든 권한은 <strong>해당 기능 사용 시에만 선택적으로 요청</strong>되며, 거부하더라도 기본적인 앱 사용에는 큰 제한이 없습니다.
+    </p>
+
+    <h3>사진 및 미디어(저장소) 권한</h3>
+    <ul>
+      <li>일기에 사진을 첨부하기 위한 용도</li>
+      <li>AI 인물 추출 기능 사용 시, 사용자가 선택한 사진을 편집하기 위한 용도</li>
+    </ul>
+
+    <h3>오디오 녹음 권한</h3>
+    <ul>
+      <li>음성 메모 기능을 사용하기 위한 용도</li>
+      <li>녹음 파일은 기기 내에만 저장됩니다.</li>
+    </ul>
+
+    <h3>알림 권한</h3>
+    <ul>
+      <li>일기 작성 리마인더 및 만보기 알림 전송을 위한 용도</li>
+      <li>서버로 알림 데이터를 전송하거나, 외부 로그 수집은 하지 않습니다.</li>
+    </ul>
+
+    <h3>신체 활동 권한 (Activity Recognition)</h3>
+    <ul>
+      <li>걸음 수, 이동 거리, 활동 시간을 측정하기 위한 용도</li>
+      <li><strong>로컬 기기 내 걸음 수 카운트 및 일기 연동용으로만 사용합니다.</strong></li>
+      <li><strong>서버 전송, 분석, 공유는 하지 않습니다.</strong></li>
+      <li>보안 정책 준수를 위해, 활동시간 기록은 걸음 수 알림이 켜져 있는 경우에만 정상 작동합니다.</li>
+    </ul>
+
+    <h3>캘린더 권한 (선택적)</h3>
+    <ul>
+      <li>사용자의 일정과 연동하여 일정 캘린더 기능을 제공하기 위한 용도</li>
+      <li>외부로 일정 정보가 전송되거나 공유되지 않습니다.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>6. 이용자 및 법정대리인의 권리</h2>
+    <p>사용자는 언제든지 다음과 같은 권리를 행사할 수 있습니다.</p>
+    <ul>
+      <li>앱 내에서 본인이 작성한 데이터(일기, 메모, 가계부 내역 등)의 조회, 수정 및 삭제</li>
+      <li>앱 내 데이터 초기화 기능을 통한 전체 데이터 삭제(제공되는 경우)</li>
+      <li>권한 허용/철회 (OS 설정을 통한 권한 변경)</li>
+      <li>앱 삭제를 통한 모든 로컬 데이터 삭제</li>
+    </ul>
+    <p>서버 저장을 하지 않으므로, 별도의 관리자에게 개인정보 열람·정정·삭제를 요청할 필요가 없습니다.</p>
+  </div>
+
+  <div class="section">
+    <h2>7. 개인정보 보호를 위한 기술적·관리적 조치</h2>
+    <ul>
+      <li>서버 미사용 원칙을 통해 데이터 유출 위험 최소화</li>
+      <li>민감 정보(사진, 오디오 등)의 외부 전송 금지</li>
+      <li>이미지 및 오디오 파일은 기기 내부에서만 처리</li>
+      <li>최신 OS 보안 정책 및 스토어 정책 준수</li>
+      <li>필요 최소한의 권한만 요청</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>8. 개인정보처리방침의 변경</h2>
+    <p>
+      본 개인정보처리방침의 내용이 변경될 경우, 앱 내 공지 또는 앱 업데이트 안내 등을 통해 변경 내용을 고지합니다.<br />
+      변경된 방침은 고지 후 또는 앱 업데이트 버전에서 효력이 발생합니다.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>9. 문의처</h2>
+    <p>개인정보와 관련된 문의, 불만 처리, 피해 구제 등은 아래 연락처로 문의하실 수 있습니다.</p>
+    <ul>
+      <li>담당자: [이상훈]</li>
+      <li>이메일: [gibsons1894@gmail.com]</li>
+    </ul>
+  </div>
+
 </body>
 </html>
